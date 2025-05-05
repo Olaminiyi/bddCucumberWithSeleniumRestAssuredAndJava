@@ -20,6 +20,7 @@
 //    WebDriver driver;
 //    WebDriverWait wait;
 //    LoginPagePOM loginPagePOM;
+//    HomepagePOM home;
 //
 //    @Given("browser window is open")
 //    public void browser_window_is_open(){
@@ -49,15 +50,15 @@
 //    public void user_click_on_login() {
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("login-button")));
 //        loginPagePOM.clickLogin();
-//
 //    }
 //
 //    @Then("user is navigated to the home page")
 //    public void user_is_navigated_to_the_home_page()  {
 //
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("app_logo")));
-//        String pageTitle = driver.findElement(By.className("app_logo")).getText();
-//        assert pageTitle.equalsIgnoreCase("Swag Labs");
-//         driver.quit();
+//        home = new HomepagePOM(driver);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("title")));
+//        home.homePageDisplayed();
+//        driver.quit();
+//
 //    }
 //}

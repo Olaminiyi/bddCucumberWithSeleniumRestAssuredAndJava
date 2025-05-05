@@ -10,17 +10,16 @@ import java.time.Duration;
 
 public class HomepagePOM {
     protected WebDriver driver;
-    By pageTitle = By.xpath("//*[contains(@class, 'app_logo')]");
     protected WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 
     public HomepagePOM(WebDriver driver){
         this.driver = driver;
     }
 
-    void homePageDisplayed(){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("app_logo")));
-        driver.findElement(pageTitle).isDisplayed();
-       //  return pageTitle;
-       // assert pageTitle.equalsIgnoreCase("Swag Labs");
+    public void homePageDisplayed(){
+        WebElement pageTitle = driver.findElement(By.className("title"));
+        wait.until(ExpectedConditions.visibilityOf(pageTitle));
+        pageTitle.getText();
+        assert pageTitle.getText().equalsIgnoreCase("Products");
     }
 }
