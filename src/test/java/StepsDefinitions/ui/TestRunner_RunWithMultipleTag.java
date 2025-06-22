@@ -1,4 +1,4 @@
-package StepsDefinitions;
+package StepsDefinitions.ui;
 
 import org.junit.runner.RunWith;
 import io.cucumber.junit.CucumberOptions;
