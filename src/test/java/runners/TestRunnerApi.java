@@ -5,7 +5,7 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/resources/apiFeatures/PutProducts.feature",
+@CucumberOptions(features="src/test/resources/apiFeatures/DeleteProducts.feature",
         glue = {"StepsDefinitions/api"},
         monochrome = true,
         plugin = {"pretty", "junit:target/JUnitReports/report.xml",
