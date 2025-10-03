@@ -6,7 +6,6 @@ import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 import net.minidev.json.JSONObject;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Products {
